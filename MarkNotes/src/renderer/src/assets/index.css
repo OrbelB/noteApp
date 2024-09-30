@@ -24,6 +24,7 @@
     -webkit-app-region: drag;
   }
 
+  /* need to do this else the button will bot be clickable */
   button {
     -webkit-app-region: no-drag;
   }

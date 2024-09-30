@@ -3,6 +3,7 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
+// would prolly have to customize this depending on the platform?
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -11,7 +12,13 @@ function createWindow(): void {
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
-    
+    center: true,
+    title: 'NoteMark',
+    frame: false,
+    vibrancy: 'under-window',
+    visualEffectState: 'active',
+    titleBarStyle: 'default',
+    // trafficLightPosition: { x: 15, y: 10 },
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
