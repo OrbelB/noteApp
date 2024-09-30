@@ -1,0 +1,4 @@
+lib will hold a serious of functions that will be use dan an api to ineract with the file system
+
+save read & write files
+
