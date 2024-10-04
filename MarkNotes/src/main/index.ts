@@ -25,6 +25,7 @@ function createWindow(): void {
       contextIsolation: true
     }
   })
+  // mainWindow.webContents.openDevTools()
   // The sandbox & ContextIsolation is impotant because it will enhance the security of the application
   // context Isolation will make the javasript in the renderes isolated form the maim proccess
   //sandbox will sandbox our renderer
@@ -86,3 +87,4 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
+

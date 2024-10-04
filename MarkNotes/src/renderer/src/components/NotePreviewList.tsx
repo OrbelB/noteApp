@@ -1,6 +1,23 @@
 import { noteMock } from '@/store/mocks'
 import { ComponentProps } from 'react'
+import { NotePreview } from './Button'
+import { twMerge } from 'tailwind-merge'
 
-export const NotePreviewList = ({ ...props }: ComponentProps<'ul'>) => {
-  return <ul {...props} >{noteMock?.map((note) => <li key={note.title}>{note.title}</li>)}</ul>
+export const NotePreviewList = ({className, ...props }: ComponentProps<'ul'>) => {
+  if (noteMock.length === 0) {
+    return (
+      <ul className={twMerge('text-center pt-4', className)} {...props}>
+        <li>
+          <span>Create your first Note!</span>
+        </li>
+        <span>...</span>
+      </ul>
+    )
+  }
+
+  return (
+    <ul className={className} {...props}>
+      {noteMock?.map((note) => <NotePreview key={note.title + note.lastEditTime} {...note} />)}
+    </ul>
+  )
 }

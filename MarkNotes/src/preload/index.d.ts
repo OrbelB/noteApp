@@ -4,7 +4,9 @@ declare global {
   interface Window {
     // electron: ElectronAPI dont need it for this project
     // this is what your exposing in the index.ts
-    contex: {}
+    context: {
+      local: string
+    }
     api: unknown
   }
 }

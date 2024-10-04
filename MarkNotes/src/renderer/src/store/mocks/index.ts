@@ -1,18 +1,18 @@
 // fake notes
 
-import { NoteInfo } from "@shared/models";
+import { NoteInfo } from '@shared/models'
 
 export const noteMock: NoteInfo[] = [
   {
-    title: "Hello world",
+    title: 'Hello world',
     lastEditTime: new Date().getTime()
   },
   {
-    title: "Good bye",
+    title: 'Good bye',
     lastEditTime: new Date().getTime()
   },
   {
-    title: "Hello Again",
+    title: 'Hello Again',
     lastEditTime: new Date().getTime()
   }
 ]
