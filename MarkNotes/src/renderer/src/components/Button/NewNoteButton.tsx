@@ -1,8 +1,7 @@
-import { ComponentProps } from 'react'
-import { ActionButton } from './ActionButton'
+import { ActionButton, ActionButtonProps } from '@/components'
 import { MdEditNote } from 'react-icons/md'
 
-export const NewNoteButton = ({ ...props }: ComponentProps<'button'>) => {
+export const NewNoteButton = ({ ...props }: ActionButtonProps) => {
   return (
     <ActionButton {...props}>
       <MdEditNote size={20} />
