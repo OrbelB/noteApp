@@ -2,3 +2,13 @@ lib will hold a serious of functions that will be use dan an api to ineract with
 
 save read & write files
 
+yarn add fs-extra 
+
+a library that is built on top of the node file system but its enhance with & is chroma based 
+  a nicer experiance
+
+
+Lodash is a modern JavaScript utility library that delivers modularity, performance,
+   and extras. It's widely used in the React ecosystem to simplify tasks involving arrays, objects, and strings
+  
+  utility for throwteling and debouncing
